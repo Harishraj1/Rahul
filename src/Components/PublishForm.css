@@ -1,0 +1,496 @@
+.main-text{
+  color: var(--Color-White-Primary, #F5F7F8);
+  align-self: stretch;
+  
+/* Text/H5 */
+  font-family: "Spline Sans Mono";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0px;
+  margin-bottom: 8px;
+}
+.sub-text{
+  color: var(--Color-White-Secondary, #B5B7B8);
+  align-self: stretch;
+  line-height: 0px;
+/* Text/Text-Small */
+  font-family: "Spline Sans Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.Info-bar{
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.form_logo{
+  border: 1px solid #FFFFFF26;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+}
+.accuracy_attempt_container{
+  display: flex;
+  gap: 20px;
+}
+
+/* FileName */
+.file-name-input {
+  font-family: "Spline Sans Mono";
+  margin-bottom: 10px;
+
+}
+.file-name-input label {
+  color: #F5F7F8;
+  font-family: "Spline Sans Mono";
+  font-size: var(--h6-font-size, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--h6-line-height, 20px); 
+  letter-spacing: var(--h6-letter-spacing, 0px);
+}
+.file-name-input input {
+  display: flex;
+  padding: 14px 20px;
+  font-family: "Spline Sans Mono";
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 530px; /* Make the input stretch across its container */
+  border-radius: 12px;
+  background: var(--Color-Grey-Primary, #313131);
+  color: #F5F7F8; /* Text color inside the input */
+  border: none;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.file-name-input input.input-error {
+  border-color: red; /* Highlight the border when there's an error */
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Description */
+
+.description-box {
+  margin-bottom: 20px;
+}
+.description-box label {
+  color: #F5F7F8; 
+  margin-bottom: 20px;
+  font-family: "Spline Sans Mono";
+  font-size: var(--h6-font-size, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--h6-line-height, 20px); /* 125% */
+  letter-spacing: var(--h6-letter-spacing, 0px);
+}
+.description-box textarea {
+  display: flex;
+  font-family: "Spline Sans Mono";
+  padding: 14px 20px;
+  font-size: 16px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 72px;
+  max-width: 530px; /* Make the input stretch across its container */
+  border-radius: 12px;
+  background: var(--Color-Grey-Primary, #313131);
+  color: #F5F7F8; /* Text color inside the input */
+  border: none; 
+  margin-top: 10px;
+}
+.description-box .textarea-error {
+  border-color: red;
+}
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+/* Tags */
+.tags-input-container {
+  margin-bottom: 20px;
+}
+.tags-label {
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  color: #F5F7F8;
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.tags-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 8px;
+  position: relative;
+}
+.tag-item {
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #222;
+  color: #F5F7F8;
+  position: relative;
+  transition: padding-right 0.2s ease;
+}
+.tag-item:hover {
+  padding-right: 32px; 
+  background-color: #333;
+}
+.tag-img {
+  width: 16px;
+  height: 16px;
+}
+.tag-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+.remove-tag-button {
+  display: none;
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #F5F7F8;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tag-item:hover .remove-tag-button {
+  display: block;
+  padding-left: 16px;
+  padding-right: 6px;
+}
+.remove-tag-button:hover {
+  color: #c94c4c;
+}
+.tags-input {
+    border: none;
+    display: inline-flex;
+    font-family: "Spline Sans Mono";
+    background: #222; 
+    width: 8px;
+    border-radius: 12px;
+    color: #F5F7F8;
+    border: 1px solid #FFFFFF26;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1; /* Update line-height for consistent text alignment */
+    padding: 8px 16px; /* Adjust padding to reduce height */
+    transition: width 0.3s ease;
+    width: 90px;
+    height: 20px; /* Keep the fixed height */
+}
+.tags-input::placeholder {
+  color: #F5F7F8;
+}
+.tags-input:focus {
+  outline: none;
+}
+.hidden-measurer {
+  visibility: hidden;
+    white-space: pre;
+  font-size: 16px;
+  font-family: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px;
+}
+
+/* Accuracy */
+.dropdown-label {
+  color: var(--Color-White-Primary, #F5F7F8);
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+}
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  height: 40px;
+  width: 235px;
+  border-radius: 12px;
+  color: #7B7B7B;
+  background: var(--Color-Black-Secondary, #222);
+  cursor: pointer;
+}
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 235px;
+  background: var(--Color-Black-Secondary, #222);
+  border-radius: 12px;
+  margin-top: 4px;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.dropdown-list-item {
+  padding: 16px 20px;
+  color: var(--Color-White-Primary, #F5F7F8);
+  cursor: pointer;
+  width: 100%; /* Ensure width of the list items matches the dropdown bar */
+}
+.dropdown-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Attempt */
+.dropdown-label {
+  color: var(--Color-White-Primary, #F5F7F8);
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  margin-bottom: 8px;
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.dropdown-header {
+  display: flex;
+  padding: 16px 20px;
+  height: 16px;
+  width: 235px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: var(--Color-Black-Secondary, #222);
+  cursor: pointer;
+}
+.dropdown-icon {
+  transition: transform 0.3s ease; /* Smooth opening/closing animation */
+}
+.dropdown-icon.open {
+  transform: rotate(180deg); /* Arrow rotation when open */
+}
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--Color-Black-Secondary, #222);
+  border-radius: 12px;
+  margin-top: 4px;
+  
+  max-height: 120px;
+  overflow-y: auto;    /* Scrollbar only appears when needed */
+  overflow-x: hidden;  /* Prevent horizontal scroll */
+  transition: max-height 0.3s ease-in-out;
+  padding-right: -1px;/* Add scrollbar when height exceeds */
+  transition: max-height 0.3s ease-in-out; /* Smooth drop animation */
+  box-sizing: content-box;
+}
+.dropdown-list::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  border-radius: 4px;
+}
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #4d4c4c; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Roundness of the scrollbar thumb */
+}
+.dropdown-list::-webkit-scrollbar-track {
+  border-radius: 12px;
+  background-color: #B5B7B8; /* Color of the scrollbar track */
+}
+.dropdown-list-item {
+  padding: 10px 20px; /* Adjusted padding for smaller height */
+  color: var(--Color-White-Primary, #F5F7F8);
+  cursor: pointer;
+  height: auto;
+  width: 80%; /* Ensure it takes full width */
+}
+.dropdown-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* VisibilityToggle */
+.visibility-container {
+  display: flex;
+  flex-direction: column;
+ }
+.visibility-title {
+  color: #F5F7F8;
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  margin-bottom: 12px;
+}
+.toggle-container{
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  border: 11px;
+  border-color: #F5F7F8;
+  align-self: stretch;
+  border-radius: 16px;
+  opacity: var(--sds-size-stroke-border);
+  background: var(--Color-Black-Secondary, #222);
+}
+.toggle-option {
+  border: 1px;
+  border-color: #F5F7F8;
+  }
+.toggle-label {
+  display: flex;
+  align-items: center;
+  width:520px;
+  background-color: #282828;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.toggle-label:hover {
+  background-color: #3a3a3a;
+}
+.toggle-label input[type="radio"] {
+  display: none;
+}
+.toggle-custom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.toggle-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 50%;
+  border: 2px solid #F5F7F8;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+.toggle-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+.toggle-label input[type="radio"]:checked + .toggle-custom .toggle-radio {
+  border-color: #00FFC2;
+
+}
+.toggle-label input[type="radio"]:checked + .toggle-custom .toggle-radio::after {
+  background-color: #00FFC2;
+}
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+}
+.toggle-title {
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-weight: 600;
+  color: #F5F7F8;
+  line-height: 20px;
+}
+.toggle-subtitle {
+  font-family: "Spline Sans Mono";
+  font-size: 14px;
+  font-weight: 400;
+  color: #B0B0B0;
+  line-height: 18px;
+}
+
+/* FormButtons */
+.button-container {
+  margin-left: 49%;
+  width: 50%;
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+button {
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0.9;
+  cursor: pointer;
+  font-family: "Spline Sans Mono";
+  font-size: 16px;
+  font-weight: 600;
+}
+.cancel-button {
+  background-color: #313131;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.cancel-button:hover {
+  background-color: #404040;
+}
+.submit-button {
+  background-color: #664DFF;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+  background-color: rgb(82, 59, 204);
+}
